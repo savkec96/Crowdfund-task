@@ -1,0 +1,819 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  position: relative;
+  font-family: "Commissioner", sans-serif;
+  background: #e6e6e6;
+}
+html body::-webkit-scrollbar {
+  width: 1rem;
+  color: hsl(176deg, 50%, 47%);
+}
+html body::-webkit-scrollbar-track {
+  background: #ccc;
+}
+html body::-webkit-scrollbar-thumb {
+  background: hsl(176deg, 50%, 47%);
+}
+
+.header {
+  background-image: linear-gradient(rgba(19, 18, 18, 0.7), rgba(239, 239, 239, 0.2)), url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+.header .navbar-section {
+  padding: 2.4rem;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar-section .logo {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+.header .navbar-section .menu-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.header .navbar-section .menu-btn .menu-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  color: #fff;
+}
+.header .navbar-section .menu-btn .menu-icon[name=close-outline] {
+  display: none;
+}
+.header .navbar-section .navbar {
+  font-size: 1.6rem;
+}
+.header .navbar-section .navbar .nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  text-transform: capitalize;
+}
+.header .navbar-section .navbar .nav-list .nav-link:link,
+.header .navbar-section .navbar .nav-list .nav-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.header .navbar-section .navbar .nav-list .nav-link:hover,
+.header .navbar-section .navbar .nav-list .nav-link:active {
+  color: hsl(176deg, 50%, 47%);
+  transition: 0.5s all;
+}
+
+.main-btn {
+  padding: 1.6rem 3.2rem;
+  color: #fff;
+  font-weight: 700;
+  background-color: hsl(176deg, 50%, 47%);
+  border: none;
+  border-radius: 2.4rem;
+}
+
+.main-btn:hover {
+  background-color: hsl(176deg, 72%, 28%);
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.plain-text {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+}
+
+.main-article {
+  margin: -10rem auto;
+  padding-bottom: 10rem;
+  width: 50%;
+}
+.main-article .section {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 4.8rem;
+  margin-bottom: 1rem;
+}
+.main-article .section .logo-picture {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.main-article .section .main-heading {
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 0%);
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.main-article .section .main-text {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.main-article .section .main-text::first-letter {
+  text-transform: capitalize;
+}
+.main-article .section .bookmark-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-article .section .bookmark-section .bookmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #e6e6e6;
+  border-radius: 2.4rem;
+}
+.main-article .section .bookmark-section .bookmark .bookmark-icon {
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  color: #e6e6e6;
+  background: hsl(0deg, 0%, 48%);
+  border-radius: 50%;
+}
+.main-article .section .bookmark-section .bookmark .bookmark-text {
+  color: hsl(0deg, 0%, 48%);
+  font-weight: 700;
+  padding-left: 1.2rem;
+  padding-right: 2.4rem;
+}
+.main-article .section .bookmark-section .bookmark-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #e6e6e6;
+  border-radius: 2.4rem;
+}
+.main-article .section .bookmark-section .bookmark-active .bookmark-icon {
+  padding: 1.6rem;
+  font-size: 1.8rem;
+  color: #fff;
+  background: hsl(176deg, 50%, 47%);
+  border-radius: 50%;
+}
+.main-article .section .bookmark-section .bookmark-active .bookmark-text {
+  color: hsl(176deg, 50%, 47%);
+  font-weight: 700;
+  padding-left: 1.2rem;
+  padding-right: 2.4rem;
+}
+.main-article .section .bookmark-section .bookmark:hover,
+.main-article .section .bookmark-section .bookmark-active:hover {
+  cursor: pointer;
+}
+.main-article .second-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+.main-article .second-sec .number-box {
+  width: 33%;
+  border-right: 2px solid #ccc;
+  text-align: left;
+  padding-left: 3.2rem;
+}
+.main-article .second-sec .number-box .number-heading {
+  font-size: 2.4rem;
+  color: hsl(0deg, 0%, 0%);
+  margin-bottom: 0.8rem;
+}
+.main-article .second-sec .number-box:last-child {
+  border-right: none;
+}
+.main-article .progress-bar {
+  width: 100%;
+  height: 2rem;
+  background: #ccc;
+  border-radius: 1rem;
+}
+.main-article .progress-bar .success-bar {
+  width: 64.3%;
+  height: 2rem;
+  background: hsl(176deg, 50%, 47%);
+  border-radius: 1rem;
+}
+.main-article .about-heading {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+  margin-bottom: 3.2rem;
+}
+.main-article .about-text {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.8;
+  margin-bottom: 2.4rem;
+}
+.main-article .section-stands {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 2.4rem;
+  margin-bottom: 1rem;
+}
+.main-article .section-stands .stands-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.main-article .section-stands .stands-box .stands-heading {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+  text-transform: capitalize;
+}
+.main-article .section-stands .stands-box .pledge-text {
+  font-size: 1.6rem;
+  color: hsl(176deg, 50%, 47%);
+  font-weight: 500;
+}
+.main-article .section-stands .reward-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-article .section-stands .reward-box .days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main-article .section-stands .reward-box .days .numbers-left {
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 0%);
+}
+.main-article .stands-disabled {
+  opacity: 0.5;
+}
+.main-article .stands-disabled .reward-box .btn-disabled {
+  padding: 1.6rem 3.2rem;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 2.4rem;
+  background-color: hsl(0deg, 0%, 48%);
+}
+
+.first-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-height: 70%;
+  overflow-y: scroll;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 4.8rem;
+  z-index: 2;
+}
+.first-modal .close-first-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.first-modal .first-modal-heading {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+  margin-bottom: 1.6rem;
+}
+.first-modal .modal-text {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.first-modal .pledge {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 2.4rem;
+  margin-bottom: 1rem;
+}
+.first-modal .pledge .pledge-heading {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 1rem;
+}
+.first-modal .pledge .pledge-heading .pledge-heading-title {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.first-modal .pledge .pledge-heading .pledge-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+.first-modal .pledge .pledge-heading .pledge-title:hover {
+  color: hsl(176deg, 50%, 47%);
+}
+.first-modal .pledge .pledge-heading .radio-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  accent-color: hsl(176deg, 72%, 28%);
+}
+.first-modal .pledge .pledge-heading .pledge-sub-text {
+  font-size: 1.6rem;
+  color: hsl(176deg, 50%, 47%);
+  font-weight: 500;
+  margin-left: 2.4rem;
+}
+.first-modal .pledge .pledge-heading .pledge-days {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.first-modal .pledge .pledge-heading .pledge-days .numbers-left {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+}
+.first-modal .pledge .pledge-heading .pledge-days .text-left {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  font-weight: 400;
+}
+.first-modal .pledge .pledge-desc {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.8;
+  margin-left: 4.8rem;
+  margin-bottom: 1.6rem;
+}
+.first-modal .pledge-disabled {
+  opacity: 0.5;
+}
+.first-modal .pledge-disabled .pledge-title-disabled {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+.first-modal .pledge-active {
+  border: 2px solid hsl(176deg, 50%, 47%);
+}
+.first-modal .pledge-active .pledge-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.4rem;
+  border-top: 1px solid #ccc;
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input {
+  position: relative;
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input .dollar-sign {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  transform: translateY(-45%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 48%);
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input .number-input {
+  border: 2px solid hsl(176deg, 50%, 47%);
+  width: 11rem;
+  padding: 1.4rem 2.4rem;
+  margin-right: 1.2rem;
+  font-weight: 700;
+  border-radius: 2.4rem;
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input .number-input::-webkit-outer-spin-button,
+.first-modal .pledge-active .pledge-form .pledge-form-input .number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input .number-input[type=number] {
+  -moz-appearance: textfield;
+}
+.first-modal .pledge-active .pledge-form .pledge-form-input .number-input:focus {
+  outline: none;
+  border-color: hsl(176deg, 72%, 28%);
+}
+
+.first-modal::-webkit-scrollbar {
+  width: 1rem;
+  color: hsl(176deg, 50%, 47%);
+}
+
+.first-modal::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 7px;
+}
+
+.first-modal::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: hsl(176deg, 50%, 47%);
+}
+
+.second-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 4.8rem;
+  z-index: 2;
+  text-align: center;
+}
+.second-modal .success-logo {
+  font-size: 8.6rem;
+  color: hsl(176deg, 50%, 47%);
+  margin-bottom: 1.6rem;
+}
+.second-modal .second-modal-heading {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 0%);
+  margin-bottom: 1.6rem;
+}
+.second-modal .modal-text {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 48%);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 81.25em) {
+  html {
+    font-size: 60%;
+  }
+  .plain-text {
+    font-size: 1.2rem;
+  }
+  .first-modal {
+    padding: 3.2rem;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 57.75%;
+  }
+  .main-article {
+    width: 55%;
+  }
+  .main-article .section-stands {
+    padding: 1.8em;
+  }
+  .first-modal {
+    width: 55%;
+  }
+  .first-modal .pledge .pledge-desc {
+    font-size: 1.4rem;
+  }
+  .first-modal .pledge-form .plain-text {
+    font-size: 1.4rem;
+  }
+  .first-modal .pledge .pledge-heading .pledge-sub-text {
+    font-size: 1.4rem;
+    margin-left: 0;
+  }
+}
+@media (max-width: 62.5em) {
+  .main-article {
+    width: 60%;
+  }
+  .first-modal {
+    width: 60%;
+  }
+}
+@media (max-width: 56.25em) {
+  .main-article {
+    width: 65%;
+    margin: -7rem auto;
+    padding-bottom: 7rem;
+  }
+  .main-article .section .main-heading {
+    font-size: 2.4rem;
+  }
+  .main-article .bookmark-text {
+    display: none;
+  }
+  .first-modal {
+    width: 65%;
+  }
+  .first-modal .pledge .pledge-heading {
+    gap: 1.4rem;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title {
+    gap: 1.4rem;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title .pledge-title {
+    font-size: 1.6rem;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title .pledge-sub-text {
+    font-size: 1.2rem;
+  }
+  .first-modal .pledge .pledge-desc {
+    font-size: 1.2rem;
+    margin-left: 3.8rem;
+  }
+}
+@media (max-width: 50em) {
+  html {
+    font-size: 55%;
+  }
+  .main-article {
+    width: 70%;
+  }
+  .main-article .section .logo-picture {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .main-article .second-sec .number-box .number-heading {
+    font-size: 2rem;
+  }
+  .main-article .about-heading {
+    font-size: 1.8rem;
+  }
+  .main-article .about-text {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+  }
+  .main-article .section-stands .reward-box .days .numbers-left {
+    font-size: 2.4rem;
+  }
+  .first-modal {
+    width: 70%;
+  }
+  .second-modal {
+    width: 50%;
+    padding: 3.2rem;
+  }
+  .second-modal .success-logo {
+    font-size: 6.4rem;
+  }
+  .main-btn {
+    padding: 1.4rem 3rem;
+    border-radius: 2.2rem;
+  }
+}
+@media (max-width: 43.75em) {
+  .main-article {
+    width: 75%;
+  }
+  .main-article .second-sec .number-box {
+    padding-left: 1.6rem;
+  }
+  .main-article .section-stands .stands-box {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  .first-modal {
+    width: 75%;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .dollar-sign {
+    left: 4%;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .number-input {
+    padding: 1.2rem 2rem;
+  }
+  .second-modal {
+    width: 55%;
+    padding: 3.2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .header .navbar-section {
+    position: relative;
+    width: 100%;
+  }
+  .header .navbar-section .menu-btn {
+    display: block;
+    z-index: 10;
+  }
+  .header .navbar-section .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    z-index: 1;
+    display: flex;
+    transition: 0.4s all linear;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .header .navbar-section .navbar .nav-list {
+    position: absolute;
+    top: 8rem;
+    left: 10%;
+    right: 10%;
+    flex-direction: column;
+    gap: 0;
+    align-items: baseline;
+    background: #fff;
+    border-radius: 7px;
+  }
+  .header .navbar-section .navbar .nav-list .nav-link:link,
+.header .navbar-section .navbar .nav-list .nav-link:visited {
+    display: block;
+    font-weight: 500;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    color: hsl(0deg, 0%, 0%);
+  }
+  .header .navbar-section .navbar .nav-list .nav-link:hover,
+.header .navbar-section .navbar .nav-list .nav-link:active {
+    color: hsl(176deg, 50%, 47%);
+    transition: 0.5s all;
+  }
+  .nav-open .navbar-section .menu-btn .menu-icon[name=close-outline] {
+    display: block;
+  }
+  .nav-open .navbar-section .menu-btn .menu-icon[name=menu-outline] {
+    display: none;
+  }
+  .nav-open .navbar-section .navbar {
+    z-index: 9;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+  .main-article {
+    width: 80%;
+  }
+  .main-article .second-sec {
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+  }
+  .main-article .second-sec .number-box {
+    text-align: center;
+    padding: 1.2rem 0;
+    width: 40%;
+    border-right: 0;
+    border-bottom: 2px solid #ccc;
+  }
+  .main-article .second-sec .number-box .number-heading {
+    font-size: 2.4rem;
+  }
+  .first-modal {
+    width: 80%;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title .pledge-title {
+    font-size: 1.8rem;
+  }
+  .first-modal .pledge .pledge-heading .pledge-heading-title .pledge-sub-text {
+    font-size: 1.4rem;
+  }
+  .first-modal .pledge-active .pledge-form {
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-top: 1.8rem;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .dollar-sign {
+    left: 9%;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .number-input {
+    width: 40%;
+    margin-right: 0;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .main-btn {
+    width: 42%;
+  }
+  .second-modal {
+    width: 60%;
+    padding: 2.8rem;
+  }
+}
+@media (max-width: 31.25em) {
+  html {
+    font-size: 50%;
+  }
+  .header .navbar-section .navbar .nav-list {
+    top: 8rem;
+    left: 5%;
+    right: 5%;
+  }
+  .main-article {
+    width: 90%;
+  }
+  .first-modal {
+    width: 90%;
+  }
+  .second-modal {
+    width: 80%;
+  }
+}
+@media (max-width: 25em) {
+  html {
+    font-size: 47.75%;
+  }
+  .header {
+    height: 50vh;
+  }
+  .header .navbar-section .navbar {
+    height: 50vh;
+  }
+  .header .navbar-section .navbar .nav-list {
+    left: 2.5%;
+    right: 2.5%;
+  }
+  .main-btn {
+    font-size: 1.2rem;
+  }
+  .main-article {
+    width: 95%;
+  }
+  .main-article .section {
+    padding: 2.4rem;
+  }
+  .main-article .section .section-stands .about-text {
+    margin-bottom: 1.2rem;
+  }
+  .main-article .section .section-stands .reward-box {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .main-article .section .stands-disabled .reward-box .btn-disabled {
+    font-size: 1.2rem;
+  }
+  .first-modal {
+    width: 95%;
+    padding: 2.4rem;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .dollar-sign {
+    font-size: 1.2rem;
+    left: 9%;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .number-input {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  .first-modal .pledge-active .pledge-form .pledge-form-input .main-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 2.2rem;
+  }
+  .second-modal {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
