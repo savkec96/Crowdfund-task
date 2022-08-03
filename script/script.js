@@ -61,8 +61,8 @@ const initRadioButton = function () {
 };
 initRadioButton();
 
-let backersMoney = document.querySelector('.money-backed');
-let backersNumber = document.querySelector('.number-backed');
+const backersMoney = document.querySelector('.money-backed');
+const backersNumber = document.querySelector('.number-backed');
 const continueBtn = document.querySelectorAll('.open-second-modal');
 const continueBtnElements = Array.from(continueBtn);
 const inputNumberType = document.querySelectorAll('.number-input');
